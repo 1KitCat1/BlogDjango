@@ -2,8 +2,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="post-entry">
+  <div class="post-entry boxed">
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
+    <p class="post-author">Created by: {{ post.author }}</p>
+    <p class="post-date">{{ post.date }}</p>
   </div>
 {% endblock content %}
