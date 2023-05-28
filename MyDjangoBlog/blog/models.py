@@ -8,6 +8,8 @@ class Post(models.Model):
         on_delete=models.CASCADE,
     )
     body = models.TextField()
+    date = models.DateField("Publication date")
 
     def __str__(self):
         return self.title
+ 
