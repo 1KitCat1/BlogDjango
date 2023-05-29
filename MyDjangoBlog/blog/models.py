@@ -14,3 +14,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
  
+
+class Likes(models.Model):
+    ip = models.CharField("IP", max_length=50)
+    post = models.ForeignKey(Post, verbose_name="post", on_delete=models.CASCADE) 

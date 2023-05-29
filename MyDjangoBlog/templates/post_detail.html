@@ -3,8 +3,17 @@
 
 {% block content %}
   <div class="post-entry boxed">
+    <div class="image">
+      <a href="#"> <img src="{{ post.img.url }}"/> </a>
+    </div>
     <h2>{{ post.title }}</h2>
     <p>{{ post.body }}</p>
+    <div class="likes">
+      <br>
+      <p>Likes: {{ post.likes_set.all.count }}</p>
+      <br>
+      <a href="{% url 'add_like' post.id %}">👍</a>
+    </div>
     <p class="post-author">Created by: {{ post.author }}</p>
     <p class="post-date">{{ post.date }}</p>
   </div>
