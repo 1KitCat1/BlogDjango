@@ -9,6 +9,7 @@ class Post(models.Model):
     )
     body = models.TextField()
     date = models.DateField("Publication date")
+    img = models.ImageField("Image", upload_to="image/%Y")
 
     def __str__(self):
         return self.title
